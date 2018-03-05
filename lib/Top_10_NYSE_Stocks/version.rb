@@ -1,0 +1,3 @@
+module Top10NYSEStocks
+  VERSION = "0.1.0"
+end
