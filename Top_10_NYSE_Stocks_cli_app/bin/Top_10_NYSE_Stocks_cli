@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require `.lib/Top_10_NYSE_Stocks_cli`
+
+
+Top10NYSEStocksCli::CLI.new.call 
