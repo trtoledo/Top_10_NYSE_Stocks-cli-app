@@ -1,4 +1,4 @@
-# Specifications for the CLI Assessment
+# Specifications for the CLI Assessment!
 
 Specs:
 - [x] Have a CLI for interfacing with the application
