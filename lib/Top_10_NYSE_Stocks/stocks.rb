@@ -2,7 +2,7 @@ class Top10NYSEStocks::Stocks
   attr_accessor :name, :volume, :last, :change, :url
 
   def self today
-  #return instances of Stocks
+  #return instances of Stock
   #puts "1. 2. 3. 4. 5. 6. 7. 8. 9. 10. stocks!"
   stock_1 = self.new
   stock_1.name = "name 1"

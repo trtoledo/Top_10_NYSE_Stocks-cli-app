@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
-require "./lib/Top_10_NYSE_Stocks"
+require "bundler/setup"
+require "Top_10_NYSE_Stocks"
 
 Top10NYSEStocks::CLI.new.call
