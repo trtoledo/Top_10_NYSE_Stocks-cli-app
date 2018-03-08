@@ -3,12 +3,16 @@ class Top10NYSEStocks::CLI
   def call
     list_Top10
     menu
-
+    goodbye
   end
 
   def list_Top10
     puts "The top 10 stocks on moviment in the NYSE today are:"
+
     puts "1. 2. 3. 4. 5. 6. 7. 8. 9. 10. stocks!"
+    @top10 = Top10NYSEStocks::Stocks.today
+
+
   end
 
   def menu
@@ -46,7 +50,7 @@ class Top10NYSEStocks::CLI
 end
 
 def goodbye
-  puts "If you wanto more info try again in 15 minutes!"
+  puts "If you wanto more new info try again in 15 minutes!"
 end
 
 end

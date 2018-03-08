@@ -1,0 +1,10 @@
+class Top10NYSEStocks::Stocks
+
+  def self today
+  #return instances of Stocks
+
+  end
+
+
+
+end
