@@ -9,7 +9,7 @@ class Top10NYSEStocks::CLI
   def list_Top10
     puts "The top 10 stocks on moviment in the NYSE today are:"
 
-    puts "1. 2. 3. 4. 5. 6. 7. 8. 9. 10. stocks!"
+    
     @top10 = Top10NYSEStocks::Stocks.today
 
 
