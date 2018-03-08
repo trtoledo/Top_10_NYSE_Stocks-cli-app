@@ -8,11 +8,10 @@ class Top10NYSEStocks::CLI
 
   def list_Top10
     puts "The top 10 stocks on moviment in the NYSE today are:"
-
-    
     @top10 = Top10NYSEStocks::Stocks.today
-
-
+    @top10.each.with_index(1) do |stock, i|
+      puts "#{i}. #{stock.name} - #{stock.last}"
+    end
   end
 
   def menu
@@ -20,28 +19,11 @@ class Top10NYSEStocks::CLI
   while input != "exit"
     puts "Enter the number of the Stock you want more info about or type list to see all the Top ten stocks or exit and enter."
     input = gets.strip.downcase
-    case input
-    when "1"
-      puts "More info on astock 1..."
-    when "2"
-      puts "More info on astock 2..."
-    when "3"
-      puts "More info on astock 3..."
-    when "4"
-      puts "More info on astock 4..."
-    when "5"
-      puts "More info on astock 5..."
-    when "6"
-      puts "More info on astock 6..."
-    when "7"
-      puts "More info on astock 7..."
-    when "8"
-      puts "More info on astock 8..."
-    when "9"
-      puts "More info on astock 9..."
-    when "10"
-      puts "More info on astock 10..."
-    when "list"
+
+    if input.to_i > 0
+      the_stock = @top10[input.to_i-1]
+      puts "#{i}. #{the_stock.name} - #{the_stock.last} - #{the_stock.volume} - #{the_stock.change} - #{the_stock.url}"
+    elsif input == "list"
       list_Top10
     else
       puts "Not sure what you want try again please!"
