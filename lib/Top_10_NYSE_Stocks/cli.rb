@@ -14,7 +14,7 @@ class Top10NYSEStocks::CLI
   def menu
     input = nil
   while input != "exit"
-    puts "Enter the number of the Stock you want more info about or type exit and enter."
+    puts "Enter the number of the Stock you want more info about or type list to see all the Top ten stocks or exit and enter."
     input = gets.strip.downcase
     case input
     when "1"
@@ -37,6 +37,10 @@ class Top10NYSEStocks::CLI
       puts "More info on astock 9..."
     when "10"
       puts "More info on astock 10..."
+    when "list"
+      list_Top10
+    else
+      puts "Not sure what you want try again please!"
     end
   end
 end
