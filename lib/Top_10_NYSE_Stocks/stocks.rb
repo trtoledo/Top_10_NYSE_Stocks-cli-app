@@ -1,9 +1,15 @@
 class Top10NYSEStocks::Stocks
   attr_accessor :name, :volume, :last, :change, :url
 
-  def self today
+  def self.today
   #return instances of Stock
-  #puts "1. 2. 3. 4. 5. 6. 7. 8. 9. 10. stocks!"
+  #Top10NYSEStocks::StockScraper.new("")
+  self.scrape_stocks
+end
+
+def self.scrape_stocks
+  stocks_today = []
+
   stock_1 = self.new
   stock_1.name = "name 1"
   stock_1.volume = "volume 1"
@@ -82,7 +88,7 @@ class Top10NYSEStocks::Stocks
   stock_10.change = "change 10"
   stock_10.url = "url 10"
 
-  [stock_1, stock_2, stock_3, stock_4, stock_5, stock_6, stock_7, stock_8, stock_9, stock_10]
+  stocks_today
 
   end
 
