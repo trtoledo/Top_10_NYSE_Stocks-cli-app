@@ -10,6 +10,8 @@ end
 def self.scrape_stocks
   stocks_today = []
 
+  doc = Nokogiri::HTML(open("https://www.nyse.com/index"))
+
   stock_1 = self.new
   stock_1.name = "name 1"
   stock_1.volume = "volume 1"
