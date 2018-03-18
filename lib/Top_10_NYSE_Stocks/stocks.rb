@@ -16,11 +16,11 @@ def self.scrape_stocks
 
   def scraping_stocks(all_stocks)
     stock = all_stocks.search("ds-row d-hbox d-hover d-pointer").each_with_index
-    stock.name = stock.serach("ds-cell d-flex5")
+
     stock_1 = self.new
-    stock_1.name = "name 1"
-    stock_1.volume = "volume 1"
-    stock_1.last = "last 1"
+    stock_1.name = stock.serach("ds-cell d-flex5")
+    stock_1.volume = "ds-cell d-flex2"
+    stock_1.last = "ds-cell d-flex2"
     stock_1.change = "change 1"
     stock_1.url = "url 1"
 
